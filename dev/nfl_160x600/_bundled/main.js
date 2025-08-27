@@ -20,9 +20,8 @@ var w = size.w;
 var h = size.h;
 
 var READ = {
-	t1: 1.3,
-	t2: 1.7,
-	t3: 2.1
+	t1: 1,
+	t2: 2
 };
 
 function init() {
@@ -35,121 +34,63 @@ function init() {
 	return tl;
 }
 
-var colors = ["d4f035", "c4ed37", "b3ea38", "a3e73a", "93e43b", "82e13d", "72de3e", "62da40", "52d741", "41d443", "31d144", "21ce46", "10cb47", "00c849"];
-
 function stag(vh) {
+	console.log(vh);
 	return _extends({ duration: .3, opacity: 0, stagger: .1 }, vh);
 }
 
-function start(barOptions) {
+function start(hero) {
 	var vh = arguments.length <= 1 || arguments[1] === undefined ? { x: -size.w } : arguments[1];
 
 	var tl = init();
 
-	var fun = barOptions.HEIGHT > barOptions.WIDTH ? animate_bars_horizontal : animate_bars_vertical;
-	fun(barOptions);
-	if (universalBanner.size === "300x250") {
-		TweenLite.to(".hero img", { duration: 3, scale: .55 });
-	} else {
-		TweenLite.from(".hero img", { duration: 3, scale: "-=.1" });
-	}
+	TweenLite.from(".hero img", { scale: .5, duration: 3 });
 
-	// return
-	console.log(stag(vh));
 	tl.from('.t1', stag(vh), "+=.4");
 	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + READ.t1);
 
 	tl.from('.t2', stag(vh));
 	var listter = [".frame1"];
 
-	if (universalBanner.size != "300x250" && universalBanner.size != "160x600") {
-		// console.log(universalBanner.size);
-		listter.push(".logos");
-	}
-	console.log(listter);
 	tl.to(listter, { duration: .3, opacity: 0 }, "+=" + READ.t2);
 
 	tl.to(".frame2", { duration: .3, opacity: 1 }, "t2");
-
+	tl.from('.logo', { duration: .3, opacity: 0 });
 	tl.from('.t3', stag(vh));
 
-	tl.to([".logos", ".t3"], { duration: .3, opacity: 0 }, "+=" + READ.t3);
-
-	tl.from(".t4", { duration: .3, opacity: 0 });
 	tl.from([".cta", ".legalBtn"], { duration: .3, opacity: 0 });
 
 	tl.add((0, _proline.olg)());
 }
 
-function animate_bars_horizontal(barOptions) {
-	var TOTAL = barOptions.TOTAL;
-	var WIDTH = barOptions.WIDTH;
-	var HEIGHT = barOptions.HEIGHT;
-	var GAP = barOptions.GAP;
+function startHor() {
+	var vh = arguments.length <= 0 || arguments[0] === undefined ? { x: -size.w } : arguments[0];
 
-	var bars = document.getElementById("bars");
+	var tl = init();
 
-	for (var i = 0; i < TOTAL; i++) {
-		var barItem = document.createElement("div");
-		var height = HEIGHT - i * GAP;
+	tl.from('.t1', stag(vh), "+=.4");
+	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + READ.t1);
 
-		TweenLite.set(barItem, {
-			transformOrigin: "0% 100%",
-			className: "bar bar_" + i,
-			width: WIDTH,
-			height: height,
+	tl.from('.t2', stag(vh));
+	var listter = [".frame1"];
 
-			scale: 1,
-			y: HEIGHT - height,
-			backgroundColor: "#" + colors[i]
-		});
+	tl.to(listter, { duration: .3, opacity: 0 }, "+=" + READ.t2);
 
-		bars.appendChild(barItem);
-	}
+	tl.to(".frame2", { duration: .3, opacity: 1 }, "t2");
+	tl.from('.t3', stag(vh));
 
-	var tl = new TimelineMax();
+	tl.from([".cta", '.logo', ".legalBtn"], { duration: .3, opacity: 0 });
 
-	tl.from('.bar', {
-		scaleY: 0,
-		stagger: 0.06
-	});
-	return tl;
-}
-
-function animate_bars_vertical(barOptions) {
-	var TOTAL = barOptions.TOTAL;
-	var WIDTH = barOptions.WIDTH;
-	var HEIGHT = barOptions.HEIGHT;
-	var GAP = barOptions.GAP;
-
-	var bars = document.getElementById("bars");
-
-	for (var i = 0; i < TOTAL; i++) {
-		var barItem = document.createElement("div");
-		TweenLite.set(barItem, {
-			className: "bar bar_" + i,
-			height: HEIGHT,
-			width: WIDTH - i * GAP,
-			y: HEIGHT * i,
-			backgroundColor: "#" + colors[i]
-		});
-
-		bars.appendChild(barItem);
-	}
-
-	var tl = new TimelineMax();
-
-	tl.from('.bar', {
-		width: 0,
-		stagger: 0.06
-	});
-	return tl;
+	tl.add((0, _proline.olg)());
 }
 
 exports.size = size;
 exports.init = init;
 exports.start = start;
-exports.colors = colors;
+exports.stag = stag;
+exports.READ = READ;
+exports.olg = _proline.olg;
+exports.startHor = startHor;
 
 },{"./proline":2}],2:[function(require,module,exports){
 "use strict";

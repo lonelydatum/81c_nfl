@@ -1,22 +1,15 @@
 
 
-import {init, start, size, colors} from '../../_common/js/common.js'
+import {init,  size, colors, stag, READ, startHor} from '../../_common/js/common.js'
 
 
 
 
-const barOptions  ={
-	TOTAL: 12,
-	WIDTH: 40,
-	HEIGHT: 300,
-	GAP: 30
-}
-
-
-start(barOptions, {y:size.h})
 
 
 
+
+startHor({y:50})
 
 
 module.exports = {};

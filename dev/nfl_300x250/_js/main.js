@@ -13,8 +13,10 @@ const barOptions  ={
 	hero: 0.9
 }
 
+// transform: scale(.7) translate(-263px, -76px);	
+start({scale:.7, x:-183, y:-53})
 
-start(barOptions)
+// translate(-183px, -53px) scale(0.7, 0.7)
 
 
 

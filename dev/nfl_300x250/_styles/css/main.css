@@ -302,9 +302,9 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 25% 25%;
   -ms-transform-origin: 25% 25%;
   transform-origin: 25% 25%;
-  -webkit-transform: scale(0.5) translate(-134px, -55px);
-  -ms-transform: scale(0.5) translate(-134px, -55px);
-  transform: scale(0.5) translate(-134px, -55px);
+  -webkit-transform: scale(0.7) translate(-143px, -53px);
+  -ms-transform: scale(0.7) translate(-143px, -53px);
+  transform: scale(0.7) translate(-143px, -53px);
 }
 
 /*# sourceMappingURL=main.css.map */
