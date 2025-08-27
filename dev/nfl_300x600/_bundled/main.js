@@ -58,7 +58,7 @@ function start(hero) {
 	tl.from('.logo', { duration: .3, opacity: 0 });
 	tl.from('.t3', stag(vh));
 
-	tl.from([".cta", ".legalBtn"], { duration: .3, opacity: 0 });
+	tl.from([".cta", ".legalBtn", ".playsmart"], { duration: .3, opacity: 0 });
 
 	tl.add((0, _proline.olg)());
 }
@@ -79,7 +79,7 @@ function startHor() {
 	tl.to(".frame2", { duration: .3, opacity: 1 }, "t2");
 	tl.from('.t3', stag(vh));
 
-	tl.from([".cta", '.logo', ".legalBtn"], { duration: .3, opacity: 0 });
+	tl.from([".cta", '.logo', ".legalBtn", ".playsmart"], { duration: .3, opacity: 0 });
 
 	tl.add((0, _proline.olg)());
 }

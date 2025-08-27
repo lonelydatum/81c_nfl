@@ -56,7 +56,7 @@ function start(hero, vh={x:-size.w}){
 	
 
 	
-	tl.from([".cta", ".legalBtn"], {duration:.3, opacity:0})
+	tl.from([".cta", ".legalBtn", ".playsmart"], {duration:.3, opacity:0})
 
 	tl.add(olg())
 
@@ -86,7 +86,7 @@ function startHor(vh={x:-size.w}){
 	
 
 	
-	tl.from([".cta", '.logo', ".legalBtn"], {duration:.3, opacity:0})
+	tl.from([".cta", '.logo', ".legalBtn", ".playsmart"], {duration:.3, opacity:0})
 
 	tl.add(olg())
 
