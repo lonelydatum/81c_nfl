@@ -46,7 +46,7 @@ function start(hero) {
 
 	TweenLite.from(".hero img", { scale: .5, duration: 3 });
 
-	tl.from('.t1', stag(vh), "+=.4");
+	tl.from('.t1', stag(vh), "+=.2");
 	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + READ.t1);
 
 	tl.from('.t2', stag(vh));
@@ -68,7 +68,7 @@ function startHor() {
 
 	var tl = init();
 
-	tl.from('.t1', stag(vh), "+=.4");
+	tl.from('.t1', stag(vh), "+=.2");
 	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + READ.t1);
 
 	tl.from('.t2', stag(vh));

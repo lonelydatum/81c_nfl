@@ -39,7 +39,7 @@ function start(hero, vh={x:-size.w}){
 	
 	
 	
-	tl.from('.t1', stag(vh), "+=.4");	
+	tl.from('.t1', stag(vh), "+=.2");	
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${READ.t1}`)
 	
 
@@ -68,7 +68,7 @@ function start(hero, vh={x:-size.w}){
 function startHor(vh={x:-size.w}){
 	const tl = init()
 		 
-	tl.from('.t1', stag(vh), "+=.4");	
+	tl.from('.t1', stag(vh), "+=.2");	
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${READ.t1}`)
 	
 
