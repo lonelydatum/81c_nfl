@@ -284,9 +284,9 @@ canvas, .text, .frame, .outline, img {
 }
 
 .hero {
-  -webkit-transform: translate(12px, 146px);
-  -ms-transform: translate(12px, 146px);
-  transform: translate(12px, 146px);
+  -webkit-transform: translate(11px, 146px);
+  -ms-transform: translate(11px, 146px);
+  transform: translate(11px, 146px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
