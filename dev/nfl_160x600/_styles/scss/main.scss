@@ -44,13 +44,13 @@
 }
 
 .hero{
-	@include pos(9, 198);
+	@include pos(9, 199);
 	width: 143px;
 	height: 216px;
 	overflow: hidden;
 	.image{
 		transform-origin: 25% 25%;		
-		transform: scale(.73) translate(-63px, -84px);	
+		transform: scale(.71) translate(-48px, -80px);	
 		// opacity: .5;		
 	}
 	

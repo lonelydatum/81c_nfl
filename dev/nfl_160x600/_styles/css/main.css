@@ -283,9 +283,9 @@ canvas, .text, .frame, .outline, img {
 }
 
 .hero {
-  -webkit-transform: translate(9px, 198px);
-  -ms-transform: translate(9px, 198px);
-  transform: translate(9px, 198px);
+  -webkit-transform: translate(9px, 199px);
+  -ms-transform: translate(9px, 199px);
+  transform: translate(9px, 199px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -300,9 +300,9 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 25% 25%;
   -ms-transform-origin: 25% 25%;
   transform-origin: 25% 25%;
-  -webkit-transform: scale(0.73) translate(-63px, -84px);
-  -ms-transform: scale(0.73) translate(-63px, -84px);
-  transform: scale(0.73) translate(-63px, -84px);
+  -webkit-transform: scale(0.71) translate(-48px, -80px);
+  -ms-transform: scale(0.71) translate(-48px, -80px);
+  transform: scale(0.71) translate(-48px, -80px);
 }
 
 /*# sourceMappingURL=main.css.map */
